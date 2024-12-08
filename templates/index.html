@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ev Fiyat Tahmini</title>
+    <link rel="stylesheet" href="../static/style.css"> <!-- CSS dosyası isteğe bağlı -->
+</head>
+
+<body>
+    <header>
+        <img src="/static/logo.png" alt="Logo" width="150">
+        <h1>Ev Fiyat Tahmin Sistemi</h1>
+    </header>
+
+    <main>
+        <form action="/predict" method="POST">
+            <label for="feature1">Özellik 1:</label>
+            <input type="text" id="feature1" name="feature1" required>
+
+            <label for="feature2">Özellik 2:</label>
+            <input type="text" id="feature2" name="feature2" required>
+
+            <label for="feature3">Özellik 3:</label>
+            <input type="text" id="feature3" name="feature3" required>
+
+            <button type="submit">Tahmin Et</button>
+        </form>
+        {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ev Fiyat Tahmini Sistemi</p>
+    </footer>
+
+
+
+    <div>
+        <div style="display: flex; justify-content: center;"><img width="200px" src="2.png" alt=""></div>
+        <div>
+            <ol style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <li style="font-size: 40px;">AzizAmiraslanov - 210205909</li><li style="font-size: 40px;">Abbas Ugur Yazan - 210205909</li><li style="font-size: 40px;">Sadig Tanirverdiyev - 210205911</li>
+            </ol>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
